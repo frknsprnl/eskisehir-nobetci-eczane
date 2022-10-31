@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./App.css";
-import { getPharmacies } from "./api/scrap";
+import { getPharmacies } from "./api/getPharmacies";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
