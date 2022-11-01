@@ -5,7 +5,7 @@ dotenv.config();
 export const getPharmacies = async () => {
   let pharmacies = [];
 
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   const page = await browser.newPage();
 
   await page.goto(`${process.env.URL}`);
