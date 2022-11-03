@@ -4,13 +4,16 @@ import { getPharmacies } from "./scrap.js";
 
 const app = express();
 
+
 // CORS middleware
-app.use(cors());
+app.use(cors({origin: true}));
 
 app.get("/", async (req, res) => {
   res.status(200).json(await getPharmacies());
 });
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log(`Server started on port ${process.env.PORT}`);
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
