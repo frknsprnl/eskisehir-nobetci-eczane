@@ -14,11 +14,14 @@ function App() {
   const [data, setData] = useState([]);
   const [isLoading, setisLoading] = useState(true);
 
-  (async () => {
-    const newData = await getPharmacies();
-    setData(newData);
-  })();
-
+  useEffect(() => {
+    (async () => {
+      const newData = await getPharmacies();
+      console.log(newData);
+      setData(newData);
+    })();
+  }, [])
+  
   useEffect(() => {
     // console.log(data);
     if (data.length !== 0) {
