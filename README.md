@@ -1,5 +1,7 @@
 # Eskisehir Nobetci Eczaneler
 
+<pre>Heroku ücretsiz deployları kaldırdığı için backend şu anda çalışmıyor.</pre>
+
 ### **https://eskisehirnobetcieczane.netlify.app/**
 
 <br>
