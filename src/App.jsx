@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     (async () => {
       const newData = await getPharmacies();
-      console.log(newData);
+      // console.log(newData);
       setData(newData);
     })();
   }, [])
@@ -48,7 +48,7 @@ function App() {
       {isLoading ? (
         <div className="loading-wrapper">
           <img src={docSVG} alt="" width={100} className="loading-img" />
-          <span>Nöbetçi eczaneler aranıyor...</span>
+          <span className="font-semibold whitespace-nowrap">Nöbetçi eczaneler aranıyor...</span>
         </div>
       ) : (
         <div className="">
@@ -61,7 +61,7 @@ function App() {
                 return (
                   <div
                     className="flex flex-col p-3 w-96 h-64 card cursor-default
-                    hover:translate-y-2  hover:[box-shadow:0_0px_0_0_#F8F8FF]
+                    hover:translate-y-1  hover:[box-shadow:0_0px_0_0_#F8F8FF]
                     hover:border-b-[0px]
                     transition-all duration-500
                     rounded-lg"
